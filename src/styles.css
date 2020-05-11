@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+nav {
+  background-color: #F1A67C;
+}
+
+a {
+  color: inherit;
+}
+/*btn hover andere Farbe */
+a:hover
+{
+  color:#00A0C6;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+footer {
+  background-color: #F1A67C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-register-title{
+  margin-left: 2rem;
+}
+
+.cancel-button{
+  margin-left: 0.5rem;
+}
+
+.login-section{
+  margin-top: 1rem;
+}
+
+

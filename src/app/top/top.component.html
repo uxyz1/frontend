@@ -1,0 +1,53 @@
+
+
+
+<header  class="navbar navbar-light bg-light flex-column flex-md-row bd-navbar" >
+  <a class="navbar-brand" href="#">
+    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Spargel
+  </a>
+
+  <form class="form-inline ">
+
+    <input class="form-control mr-sm-auto" type="search" placeholder="Search" aria-label="Search" >
+    <button class="btn btn-outline-secondary my-2 my-sm-4 " type="submit">Search</button>
+
+  </form>
+
+
+  <a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+     routerLink="/login" *ngIf="sessionUser === null">Anmelden</a>
+
+  <a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+     routerLink="/registration" *ngIf="sessionUser === null">Registrieren</a>
+
+  <a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+     *ngIf="sessionUser !== null" (click)="logout()">Logout</a>
+
+</header>
+
+
+<ul class="nav justify-content-center">
+  <li class="nav-item active">
+    <a class="navbar-brand" href="#">Aktuell
+    </a>
+  </li>
+  <li class="nav-item active">
+    <a class="navbar-brand" routerLink="/entry" *ngIf="sessionUser !== null">Entry Schreiben
+    </a>
+  </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Info
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">was ist Spargel?</a>
+      <a class="dropdown-item" href="#"></a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Impressum</a>
+    </div>
+  </li>
+</ul>
+
+

@@ -1,0 +1,55 @@
+
+
+
+<main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+  <h1 class="bd-title" id="content">{{entry.name}}</h1>
+  <p class = "pull-left"><small>{{entry.postedAt}}</small></p>
+
+
+  <h3><a class="navbar-brand" [routerLink]="['/yorum', entry.id]" >Kommentar Schreiben
+  </a>
+  </h3>
+  <hr>
+
+  <div class="commments-list" *ngFor="let yorum of yorums">
+    <div class="media">
+      <div class="media-body">
+        <p class="pull-right"><small>5 days ago</small></p>
+
+  <h4 class="text-justify"><em>{{yorum.text}}</em>
+
+  </h4>
+
+        <div class="row">
+          <div class="col-lg-8"> <small>
+            <a href="">Like</a> -
+            <a href="">Share</a>
+          </small> </div>
+          <div class="col-lg-4">Benutzer</div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+</main>
+<!--
+
+<ul class="w-50 p-3">
+    <h3>{{entry.name}}</h3>
+  <li *ngFor="let yorum of yorums">
+    {{yorum.text}}
+
+  </li>
+  <li class="nav-item active">
+    <a class="navbar-brand" [routerLink]="['/yorum', entry.id]" >Kommentar Schreiben
+    </a>
+  </li>
+</ul>
+-->

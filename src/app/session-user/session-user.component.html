@@ -1,0 +1,3 @@
+<h2 *ngIf="sessionUser === null">You're not logged in.</h2>
+<button class="btn btn-primary" routerLink="/login" *ngIf="sessionUser === null">Login</button>
+<h2 *ngIf="sessionUser !== null">Your Profile, {{ sessionUser.username }}</h2>

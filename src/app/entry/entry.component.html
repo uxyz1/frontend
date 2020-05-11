@@ -1,0 +1,33 @@
+
+<!--<div *ngIf="sessionUser != null">-->
+
+<div class="card col-sm-8 login-section">
+  <h3 class="my-4 login-register-title">Entry Schreiben</h3>
+  <div class="card-body" id="loginSection">
+
+
+
+    <div class="container">
+      <form (ngSubmit)="entryschreiben()">
+
+
+        <div class="form-group ">
+          <label class="col-lg">Text:<br>
+            <input name="text" class="form-control form-rounded "
+                                  [(ngModel)]="entryData.name">
+          </label><br>
+        </div>
+
+        <div class="container row  justify-content-between">
+          <button class="btn btn-primary" type="submit">Abschicken</button>
+          <a routerLink="" class="btn-link">Cancel</a>
+          <p *ngIf="flashMessage.message">{{flashMessage.message}}</p>
+        </div>
+      </form>
+      <hr>
+
+    </div>
+  </div>
+</div>
+
+

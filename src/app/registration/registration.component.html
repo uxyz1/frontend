@@ -1,0 +1,30 @@
+<div class="card col-sm-8 login-section">
+  <h3 class="my-4 login-register-title">Register</h3>
+  <div class="card-body" id="loginSection">
+    <div class="container">
+      <form (ngSubmit)="register()">
+        <div class="form-group">
+          <label>Username:<br> <input name="username" class="form-control"
+                                      [(ngModel)]="registrationData.username"></label><br>
+        </div>
+        <div class="form-group">
+          <label>Password:<br> <input type="password" class="form-control" name="password"
+                                      [(ngModel)]="registrationData.password1"></label><br>
+        </div>
+        <div class="form-group">
+          <label>Repeat password: <br><input type="password" class="form-control" name="password"
+                                             [(ngModel)]="registrationData.password2"></label><br>
+        </div>
+        <div class="container row  justify-content-between">
+          <button class="btn btn-primary" type="submit">Register</button>
+          <a routerLink="/" class="cancel-button">Cancel</a>
+          <p *ngIf="flashMessage.message">{{flashMessage.message}}</p>
+        </div>
+      </form>
+      <hr>
+      <p>Already have an account?
+        <a class="btn-link" routerLink="/login">Login here!</a>
+      </p>
+    </div>
+  </div>
+</div>
